@@ -5,14 +5,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/testBoot")
+@RequestMapping("/user")
 public class UserController {
     @Autowired
     private UserService userService;
     @RequestMapping("getUser")
+    @ResponseBody
     public String getUser() {
 
            return userService.Sel().toString();

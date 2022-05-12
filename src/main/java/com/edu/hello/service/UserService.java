@@ -14,7 +14,6 @@ public class UserService {
     @Autowired
     UserMapper userMapper;
     public User Sel() {
-        System.out.println(userMapper);
         return userMapper.Sel();
     }
     public User findOne( int id) {
