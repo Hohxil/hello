@@ -3,9 +3,17 @@ package com.edu.hello.entity;
 
 public class User {
     private Integer id;
-    private String userName;
-    private String passWord;
-    private String realName;
+    private String name;
+    private Double money;
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", money=" + money +
+                '}';
+    }
 
     public Integer getId() {
         return id;
@@ -15,37 +23,19 @@ public class User {
         this.id = id;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getName() {
+        return name;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getPassWord() {
-        return passWord;
+    public Double getMoney() {
+        return money;
     }
 
-    public void setPassWord(String passWord) {
-        this.passWord = passWord;
-    }
-
-    public String getRealName() {
-        return realName;
-    }
-
-    public void setRealName(String realName) {
-        this.realName = realName;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", userName='" + userName + '\'' +
-                ", passWord='" + passWord + '\'' +
-                ", realName='" + realName + '\'' +
-                '}';
+    public void setMoney(Double money) {
+        this.money = money;
     }
 }

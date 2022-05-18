@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 
 @Service
@@ -18,6 +19,11 @@ public class UserService {
     }
     public User findOne( int id) {
         return userMapper.findOne(id);
+    }
+
+    public int insert(List<User> list) {
+         return userMapper.insert(list);
+
     }
 }
 
